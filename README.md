@@ -252,6 +252,10 @@ A service you can inject in your controller to show the filter bar
     - `.modal` (Appends to a modal)
     - `.menu-content` (Appends to the content section of a side menu.  Useful when the expose-aside-when attr is set.)
 
+  - `{boolean=}` `focusOnShow`
+
+    Whether to focus the search input on filterBar show.  If false, backdrop will be hidden. Default value is true.
+
   - `{object=}` `config`
 
     A config object to customize the filter bar template instance.

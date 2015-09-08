@@ -96,7 +96,8 @@
             delay: 300,
             cancelText: 'Cancel',
             cancelOnStateChange: true,
-            container: $body
+            container: $body,
+            focusOnShow: true,
           }, opts);
 
           //if no custom theme was configured, get theme of containers bar-header
@@ -270,8 +271,10 @@
 
               $timeout(function () {
                 filterWrapperEl.addClass('filter-bar-in');
-                scope.focusInput();
-                scope.showBackdrop();
+                if (scope.focusOnShow) {
+                  scope.focusInput();
+                  scope.showBackdrop();
+                }
                 (done || angular.noop)();
               }, 20, false);
             });
